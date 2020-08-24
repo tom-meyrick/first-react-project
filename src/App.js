@@ -1,13 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from './Header';
-import Paragraph from './Paragraph';
+import Stuff from './Stuff';
+
 
 const App = () => (
-    <>
-    <Header />
-    <Paragraph />
-    </>
+    <Stuff />
   );
 
 export default App;
