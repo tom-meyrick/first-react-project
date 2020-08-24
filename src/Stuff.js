@@ -8,7 +8,7 @@ const Stuff = () => (
     <>
     <Header text="Tom" />
     <Paragraph message="That's all folks" />
-    <Square />
+    <Square color="green" />
     <People />
     </>
 );
