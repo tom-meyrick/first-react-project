@@ -5,7 +5,7 @@ import Appify from './Appify';
 
 
 const App = () => (
-   <>
+    <>
     <Stuff />
     <Appify />
     </>
