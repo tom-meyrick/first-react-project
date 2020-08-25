@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Header = ({text}) => (
+const Header = ({children}) => (
     <header className="jumbotron">
-        <h1>Hello {text}</h1>
+        <h1>Hello {children}</h1>
     </header>
 );
 

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Paragraph = ({message}) => (
+const Paragraph = ({children}) => (
     <article className="col-md-6">
-        <p>{message ? message : "Hello World"}</p>
+        <p>{children ? children : "Hello World"}</p>
     </article>
 );
 
