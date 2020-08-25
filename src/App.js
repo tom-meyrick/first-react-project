@@ -6,10 +6,11 @@ import Clicked from './Clicked';
 import ToggleText from './ToggleText'; 
 import Counter from './Counter';
 import StepCounter from './StepCounter';
-
+import CatchMeIfYouCan from './CatchMeIfYouCan';
 
 const App = () => (
     <>
+    <CatchMeIfYouCan jump={100} />
     <Clicked />
     <Stuff />
     <Appify />
