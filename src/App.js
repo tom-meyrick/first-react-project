@@ -7,6 +7,9 @@ import ToggleText from './ToggleText';
 import Counter from './Counter';
 import StepCounter from './StepCounter';
 import CatchMeIfYouCan from './CatchMeIfYouCan';
+import RollCall from './RollCall'; 
+
+let names = ["Dave", "Ariel", "Sheila", "Nigel", "Peter"]; 
 
 const App = () => (
     <>
@@ -17,6 +20,7 @@ const App = () => (
     <ToggleText initial="Hello" alternate="World" />
     <Counter initial={ 50 } max={ 100 } />
     <StepCounter step={ 5 } max={ 100 } />
+    <RollCall names={ names } />
     </>
   );
 

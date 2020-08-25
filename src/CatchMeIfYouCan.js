@@ -1,3 +1,5 @@
+// Create a <CatchMeIfYouCan jump={ 100 }> component. It should have a <button> that when clicked moves jump pixels down the screen.
+
 import React, { Component } from 'react';
 
 class CatchMeIfYouCan extends Component
