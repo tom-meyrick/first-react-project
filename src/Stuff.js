@@ -18,7 +18,7 @@ const Stuff = ({square}) => (
     <Header>Tom</Header>
 
     <Paragraph>That's All Folks</Paragraph>
-    {square ? <Square color="green" /> : null}
+    {square ? <Square color="hotpink" /> : null}
     <People names= {['Jim', 'Mike', 'Angela']} />
     <Basket items={items} />
     {/* <FadeIn time={"500ms"}>Hello</FadeIn> */}
