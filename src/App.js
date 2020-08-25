@@ -5,6 +5,7 @@ import Appify from './Appify';
 import Clicked from './Clicked';
 import ToggleText from './ToggleText'; 
 import Counter from './Counter';
+import StepCounter from './StepCounter';
 
 
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
     <Appify />
     <ToggleText initial="Hello" alternate="World" />
     <Counter initial={ 50 } max={ 100 } />
+    <StepCounter step={ 5 } max={ 100 } />
     </>
   );
 
