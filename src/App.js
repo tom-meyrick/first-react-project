@@ -12,7 +12,8 @@ import GodCounter from './GodCounter';
 import TwoCounters from './TwoCounters'; 
 import LightBox from './LightBox';
 import Length from './Length'; 
-
+import PasswordStrength from './PasswordStrength'; 
+import TempConverter from './TempConverter';
 
 let names = ["Dave", "Ariel", "Sheila", "Nigel", "Peter"]; 
 let blah = "https://www.sundaypost.com/wp-content/uploads/sites/13/2018/03/iStock-697083606.jpg.jpg";
@@ -20,6 +21,8 @@ let blah = "https://www.sundaypost.com/wp-content/uploads/sites/13/2018/03/iStoc
 const App = () => (
     <>
     {/* <LightBox src={ blah }/> */}
+    <TempConverter />
+    <PasswordStrength />
     <Length />
     <TwoCounters />
     <GodCounter />
