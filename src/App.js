@@ -8,11 +8,13 @@ import Counter from './Counter';
 import StepCounter from './StepCounter';
 import CatchMeIfYouCan from './CatchMeIfYouCan';
 import RollCall from './RollCall'; 
+import GodCounter from './GodCounter'; 
 
 let names = ["Dave", "Ariel", "Sheila", "Nigel", "Peter"]; 
 
 const App = () => (
     <>
+    <GodCounter />
     <CatchMeIfYouCan jump={100} />
     <Clicked />
     <Stuff />
