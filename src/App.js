@@ -9,11 +9,17 @@ import StepCounter from './StepCounter';
 import CatchMeIfYouCan from './CatchMeIfYouCan';
 import RollCall from './RollCall'; 
 import GodCounter from './GodCounter'; 
+import TwoCounters from './TwoCounters'; 
+import LightBox from './LightBox';
+
 
 let names = ["Dave", "Ariel", "Sheila", "Nigel", "Peter"]; 
+let blah = "https://www.sundaypost.com/wp-content/uploads/sites/13/2018/03/iStock-697083606.jpg.jpg";
 
 const App = () => (
     <>
+    <LightBox src={ blah }/>
+    <TwoCounters />
     <GodCounter />
     <CatchMeIfYouCan jump={100} />
     <Clicked />
