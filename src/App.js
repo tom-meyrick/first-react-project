@@ -16,13 +16,19 @@ import PasswordStrength from './PasswordStrength';
 import TempConverter from './TempConverter';
 import List from './List'; 
 import Adder from './Adder'; 
+import Transform from './Transform';
 
 let names = ["Dave", "Ariel", "Sheila", "Nigel", "Peter"]; 
 let blah = "https://www.sundaypost.com/wp-content/uploads/sites/13/2018/03/iStock-697083606.jpg.jpg";
 
+let square = (x) => x * x; 
+let sum = (x) => +x + +x;
+
 const App = () => (
     <>
     {/* <LightBox src={ blah }/> */}
+    <Transform transform={ sum }/>
+    <Transform transform={ square }/>
     <Adder />
     <List />
     <TempConverter />
@@ -30,7 +36,7 @@ const App = () => (
     <Length />
     <TwoCounters />
     <GodCounter />
-    <CatchMeIfYouCan jump={100} />
+    <CatchMeIfYouCan jump={ 100 } />
     <Clicked />
     <Stuff />
     <Appify />
