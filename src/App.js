@@ -22,6 +22,7 @@ import Transform from "./Transform";
 import Footer from "./Footer";
 import FourOhFour from "./FourOhFour";
 import Square from "./Square";
+import Progress from "./pre-made/Progress";
 
 let names = ["Dave", "Ariel", "Sheila", "Nigel", "Peter"];
 let blah =
@@ -32,6 +33,7 @@ let sum = (x) => +x + +x;
 
 const App = () => (
   <Router>
+    <Progress />
     <Stuff />
     <Switch>
       <Route exact path="/">
