@@ -21,6 +21,7 @@ import Adder from "./Adder";
 import Transform from "./Transform";
 import Footer from "./Footer";
 import FourOhFour from "./FourOhFour";
+import Square from "./Square";
 
 let names = ["Dave", "Ariel", "Sheila", "Nigel", "Peter"];
 let blah =
@@ -33,29 +34,23 @@ const App = () => (
   <Router>
     <Stuff />
     <Switch>
-      <Route exact-path="/">
+      <Route exact path="/">
         <Transform transform={sum} />
         <Transform transform={square} />
         <Adder />
         <List />
       </Route>
-    </Switch>
-    <Switch>
       <Route path="/first">
         <TempConverter />
         <PasswordStrength />
         <Length />
       </Route>
-    </Switch>
-    <Switch>
       <Route path="/second">
         <TwoCounters />
         <GodCounter />
         <CatchMeIfYouCan jump={100} />
         <Clicked />
       </Route>
-    </Switch>
-    <Switch>
       <Route path="/third">
         <ToggleText initial="Hello" alternate="World" />
         <Counter initial={50} max={100} />
@@ -63,8 +58,16 @@ const App = () => (
         <RollCall names={names} />
         <Appify />
       </Route>
-    </Switch>
-    <Switch>
+      <Route
+        path="/square/:color"
+        render={({ match }) => <Square color={match.params.color} />}
+      />
+      <Route
+        path="/steps/:max/:step"
+        render={({ match }) => (
+          <StepCounter max={+match.params.max} step={+match.params.step} />
+        )}
+      />
       <FourOhFour />
     </Switch>
     <Footer />
