@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
 import Stuff from "./Stuff";
@@ -20,6 +20,7 @@ import List from "./List";
 import Adder from "./Adder";
 import Transform from "./Transform";
 import Footer from "./Footer";
+import FourOhFour from "./FourOhFour";
 
 let names = ["Dave", "Ariel", "Sheila", "Nigel", "Peter"];
 let blah =
@@ -31,30 +32,41 @@ let sum = (x) => +x + +x;
 const App = () => (
   <Router>
     <Stuff />
-    <Route exact-path="/">
-      <Transform transform={sum} />
-      <Transform transform={square} />
-      <Adder />
-      <List />
-    </Route>
-    <Route path="/first">
-      <TempConverter />
-      <PasswordStrength />
-      <Length />
-    </Route>
-    <Route path="/second">
-      <TwoCounters />
-      <GodCounter />
-      <CatchMeIfYouCan jump={100} />
-      <Clicked />
-    </Route>
-    <Route path="/third">
-      <ToggleText initial="Hello" alternate="World" />
-      <Counter initial={50} max={100} />
-      <StepCounter step={5} max={100} />
-      <RollCall names={names} />
-      <Appify />
-    </Route>
+    <Switch>
+      <Route exact-path="/">
+        <Transform transform={sum} />
+        <Transform transform={square} />
+        <Adder />
+        <List />
+      </Route>
+    </Switch>
+    <Switch>
+      <Route path="/first">
+        <TempConverter />
+        <PasswordStrength />
+        <Length />
+      </Route>
+    </Switch>
+    <Switch>
+      <Route path="/second">
+        <TwoCounters />
+        <GodCounter />
+        <CatchMeIfYouCan jump={100} />
+        <Clicked />
+      </Route>
+    </Switch>
+    <Switch>
+      <Route path="/third">
+        <ToggleText initial="Hello" alternate="World" />
+        <Counter initial={50} max={100} />
+        <StepCounter step={5} max={100} />
+        <RollCall names={names} />
+        <Appify />
+      </Route>
+    </Switch>
+    <Switch>
+      <FourOhFour />
+    </Switch>
     <Footer />
   </Router>
 );
