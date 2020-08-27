@@ -23,6 +23,7 @@ import Footer from "./Footer";
 import FourOhFour from "./FourOhFour";
 import Square from "./Square";
 import Progress from "./pre-made/Progress";
+import CatchMeIfYouCan2 from "./pre-made/CatchMeIfYouCan2";
 
 let names = ["Dave", "Ariel", "Sheila", "Nigel", "Peter"];
 let blah =
@@ -33,6 +34,7 @@ let sum = (x) => +x + +x;
 
 const App = () => (
   <Router>
+    <CatchMeIfYouCan2 jump={100} />
     <Progress />
     <Stuff />
     <Switch>
