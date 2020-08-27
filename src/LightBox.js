@@ -6,11 +6,11 @@
 // class LightBox extends Component
 // {
 //     constructor(props) {
-//         super(props); 
+//         super(props);
 //     }
 
 //     render() {
-//     let image = this.props.blah; 
+//     let image = this.props.blah;
 //     return (
 //     <img src={image} alt="Bristol" width="200" height="200" />
 //     );

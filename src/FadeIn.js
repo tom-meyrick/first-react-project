@@ -3,14 +3,14 @@
 
 // function FadeIn({children}) {
 //    const [open, setOpen] = useState(false);
- 
+
 //    return (
 //        <Fade in={open}>
 //          <h1>{children}</h1>
 //        </Fade>
 //    );
 //  }
- 
+
 //  render(<Example />);
 
 // export default FadeIn;
