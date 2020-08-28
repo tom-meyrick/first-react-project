@@ -1,6 +1,7 @@
-// Create a <TempConverter> component. It should have a °F and °C <input>. When you type a number into one <input> it should update the value in the other.
+// Using only React Bootstrap components (there shouldn't be any HTML elements), create a <TempConverter> component. It should have a °F and °C input. When you type a number into one input it should update the value in the other.
 
 import React, { Component } from "react";
+import Form from "react-bootstrap/Form";
 
 class PasswordStrength extends Component {
   constructor(props) {
@@ -25,26 +26,26 @@ class PasswordStrength extends Component {
   }
 
   render() {
-    let { fahrenheit, celsius } = this.state;
+    const { fahrenheit, celsius } = this.state;
     return (
-      <div className="form-group">
-        <label for="fahrenheit">Fahrenheit</label>
-        <input
+      <Form.Group>
+        <Form.Label for="fahrenheit">Fahrenheit</Form.Label>
+        <Form.Control
           className="form-control"
           type="number"
           value={fahrenheit}
           onChange={this.handleF}
           name="fahrenheit"
-        ></input>
-        <label for="celsius">Celsius</label>
-        <input
+        />
+        <Form.Label for="celsius">Celsius</Form.Label>
+        <Form.Control
           className="form-control"
           type="number"
           value={celsius}
           onChange={this.handleC}
           name="celsius"
-        ></input>
-      </div>
+        />
+      </Form.Group>
     );
   }
 }
