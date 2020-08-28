@@ -1,9 +1,7 @@
-// Create a <List> component that consists of a <ul>, an <input>, and a <button>Add</button>. When you click the "Add" button, whatever is in the <input> should get added to the <ul>.
-
-//Enter text in input
-//Click button - set state to be e.current.value
-//ul takes val from state
-//returns val as list item
+// Using only React Bootstrap components (there shouldn't be any HTML elements), create a <List> component that consists of a list group, an input, and an "Add" button. When you click the button, whatever is in the input should get added to the list group.
+import ListGroup from "react-bootstrap/ListGroup";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 import React, { Component } from "react";
 
@@ -28,21 +26,23 @@ class List extends Component {
     const { todo, list } = this.state;
     return (
       <div className="form-group">
-        <ul>
+        <ListGroup as="ul">
           {list.map((todo, index) => (
-            <li key={index}>{todo}</li>
+            <ListGroup.Item as="li" key={index}>
+              {todo}
+            </ListGroup.Item>
           ))}
-        </ul>
-        <form>
-          <input
+        </ListGroup>
+        <Form.Group>
+          <Form.Control
             type="text"
             className="form-control"
             placeholder="Add todo"
             value={todo}
             onChange={this.handleChange}
-          ></input>
-          <button onClick={this.handleClick}>Add</button>
-        </form>
+          />
+          <Button onClick={this.handleClick}>Add</Button>
+        </Form.Group>
       </div>
     );
   }
