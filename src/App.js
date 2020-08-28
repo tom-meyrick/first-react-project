@@ -24,6 +24,7 @@ import FourOhFour from "./FourOhFour";
 import Square from "./Square";
 import Progress from "./pre-made/Progress";
 import CatchMeIfYouCan2 from "./pre-made/CatchMeIfYouCan2";
+import Dates from "./pre-made/Dates";
 
 let names = ["Dave", "Ariel", "Sheila", "Nigel", "Peter"];
 let blah =
@@ -34,6 +35,7 @@ let sum = (x) => +x + +x;
 
 const App = () => (
   <Router>
+    <Dates />
     <CatchMeIfYouCan2 jump={100} />
     <Progress />
     <Stuff />
